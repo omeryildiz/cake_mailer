@@ -1,4 +1,5 @@
-cake_mailer
+Mail Programı
 ===========
+Bu program herhangi bir gmail hesabı kullanarak mail atmaya yarayan bir çevrimiçi programdır.
 
-Goomail Sender
+
