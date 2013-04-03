@@ -1,0 +1,47 @@
+<?php ?>
+
+<script language="javascript" type="text/javascript">
+  tinyMCE.init({
+    theme : "advanced",
+    mode: "exact",
+    elements : "elm1",
+    theme_advanced_toolbar_location : "top",
+    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,separator,"
+    + "justifyleft,justifycenter,justifyright,justifyfull,formatselect,"
+    + "bullist,numlist,outdent,indent",
+    theme_advanced_buttons2 : "link,unlink,anchor,image,separator,"
+    +"undo,redo,cleanup,code,separator,sub,sup,charmap",
+    theme_advanced_buttons3 : "",
+    height:"350px",
+    width:"725px"
+});
+
+</script>
+
+<div class="messages form">
+<?php echo $this->Form->create('Message'); ?>
+	<fieldset>
+		<legend><?php echo __('Add Message'); ?></legend>
+	<?php
+		$style = 'width:700px';
+		echo $this->Form->input('Konusu',array('style'=>$style));
+
+		echo $this->Tinymce->input('Mesaj',array('rows' => '5', 'cols' => '10', 'id' => 'elm1'));
+	
+	?>
+
+
+
+	</fieldset>
+<?php echo $this->Form->end(__('Submit')); ?>
+</div>
+
+
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Messages'), array('action' => 'index')); ?></li>
+	</ul>
+</div>
+
